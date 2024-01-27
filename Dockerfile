@@ -1,6 +1,5 @@
 FROM ubuntu
-MAINTAINER manoj
-RUN apt update -y
-RUN yum install httpd -y
+Run apt update -y
+RUN apt install apache2 -y
 COPY index.html /var/www/html
-CMD["usr/sbin/httpd", "-D", "FOEGROUND"] 
+CMD ["/etc/apache2/apache2.conf", "-D" , "FOREGROUND"]
